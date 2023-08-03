@@ -6,6 +6,20 @@ avatar: $assets.files.assets.avatar.svg
 
 Lorem ipsum dolor set amet
 
+-- button: Dribble
+cta-link: /
+
+-- button: Behnace
+cta-link: /
+
+-- button: Webflow
+cta-link: /
+
+-- button: LinkedIn
+cta-link: /
+
+-- end: linktree
+
 -- end: ds.page
 
 
@@ -21,6 +35,7 @@ caption title:
 body body:
 ftd.image-src avatar:
 optional ftd.background-image bg-image:
+children wrapper:
 
 -- ftd.column:
 width: fill-container
@@ -33,8 +48,12 @@ background.linear-gradient: $lg
 src: $linktree.avatar
 width: auto
 
+-- ftd.column:
+align-content: center
+spacing.fixed.px: 15
+
 -- ftd.text: $linktree.title
-role: $inherited.types.heading-small
+role: $inherited.types.heading-medium
 color: $inherited.colors.text-strong
 style: medium
 
@@ -46,7 +65,45 @@ $linktree.body
 
 -- end: ftd.column
 
+-- ftd.column:
+children: $linktree.wrapper
+spacing.fixed.px: 10
+
+-- end: ftd.column
+
+-- end: ftd.column
+
 -- end: linktree
+
+
+
+
+
+
+
+
+
+
+-- component button:
+caption cta-text:
+string cta-link:
+
+-- ftd.column:
+background.solid: $inherited.colors.cta-tertiary.text
+width.fixed.px: 838
+padding.px: 24
+align-content: center
+border-radius.px: 40
+
+-- ftd.text: $button.cta-text
+role: $inherited.types.copy-small
+color: $inherited.colors.cta-primary.border
+style: bold
+link: $button.cta-link
+
+-- end: ftd.column
+
+-- end: button
 
 
 
@@ -61,8 +118,12 @@ colors: $color-values-1
 
 -- ftd.linear-gradient-color list color-values-1:
 
--- ftd.linear-gradient-color: black
+-- ftd.linear-gradient-color: #FFFFFF
 
--- ftd.linear-gradient-color: brown
+-- ftd.linear-gradient-color: #7C543C
+
+-- ftd.linear-gradient-color: #AE7453
+
+-- ftd.linear-gradient-color: #D9D9D9
 
 -- end: color-values-1
