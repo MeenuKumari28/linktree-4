@@ -40,6 +40,7 @@ children wrapper:
 -- ftd.column:
 width: fill-container
 spacing.fixed.px: 48
+spacing.fixed.px if { ftd.device == "mobile" }: 24
 align-content: center
 padding-vertical.px: 97
 background.linear-gradient: $lg
@@ -51,6 +52,7 @@ width: auto
 -- ftd.column:
 align-content: center
 spacing.fixed.px: 15
+spacing.fixed.px if { ftd.device == "mobile" }: 8
 
 -- ftd.text: $linktree.title
 role: $inherited.types.heading-medium
@@ -68,6 +70,9 @@ $linktree.body
 -- ftd.column:
 children: $linktree.wrapper
 spacing.fixed.px: 10
+padding-top.px: 49
+width: fill-container
+padding-horizontal.px if { ftd.device == "mobile" }: 16
 
 -- end: ftd.column
 
@@ -90,8 +95,10 @@ string cta-link:
 
 -- ftd.column:
 background.solid: $inherited.colors.cta-tertiary.text
-width.fixed.px: 838
+max-width.fixed.px: 838
+width: fill-container
 padding.px: 24
+padding.px if { ftd.device == "mobile" }: 19
 align-content: center
 border-radius.px: 40
 
