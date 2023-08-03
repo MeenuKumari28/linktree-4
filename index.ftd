@@ -69,6 +69,7 @@ $linktree.body
 
 -- ftd.column:
 children: $linktree.wrapper
+align-content: center
 spacing.fixed.px: 10
 padding-top.px: 49
 width: fill-container
