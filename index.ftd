@@ -92,6 +92,7 @@ padding-horizontal.px if { ftd.device == "mobile" }: 16
 -- component button:
 caption cta-text:
 string cta-link:
+boolean $mouse-in: false
 
 -- ftd.column:
 background.solid: $inherited.colors.cta-tertiary.text
@@ -101,6 +102,10 @@ padding.px: 24
 padding.px if { ftd.device == "mobile" }: 19
 align-content: center
 border-radius.px: 40
+background.solid if { button.mouse-in }: $inherited.colors.background.step-2
+$on-mouse-enter$: $ftd.set-bool($a = $button.mouse-in, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $button.mouse-in, v = false)
+cursor: pointer
 
 -- ftd.text: $button.cta-text
 role: $inherited.types.copy-small
